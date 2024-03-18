@@ -24,16 +24,16 @@ public class Task {
 		this.id = id;
 	}
 	
-	private String taskdescription; // must have the EXACT name as his React state property and may not be ignored!
+	private String taskdescription;
 
 	public Task() {
     }
 
-	public String getTaskdescription() { // do not apply camel-case here! Its a Bean!
+	public String getTaskdescription() {
 		return taskdescription;
 	}
 
-	public void setTaskdescription(String taskdescription) { // do not apply camel-case here! Its a Bean!
+	public void setTaskdescription(String taskdescription) {
 		this.taskdescription = taskdescription;
 	}
 
