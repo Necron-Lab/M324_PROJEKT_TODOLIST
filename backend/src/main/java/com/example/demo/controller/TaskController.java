@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -31,9 +30,9 @@ public class TaskController {
 	}
 
 	@CrossOrigin
-	@PostMapping("/tasks")
+	@PostMapping("/add")
 	public ResponseEntity<Task> addTask(@RequestBody String taskdescription) {
-		
+
 		Task task = new Task();
 		task.setTaskdescription(taskdescription);
 		taskRepository.save(task);
@@ -46,11 +45,10 @@ public class TaskController {
 		System.out.println("API EP '/delete': '" + taskdescription + "'");
 		// 1. Suche Task-Datensatz mit gegebenem Inhalt in DB
 		// Ändere den Rückgabetyp auf Optional<Task>
-		Optional<Task> toDeleteTaskOptional = taskRepository.findByTaskdescription(taskdescription);
+		Task task = taskRepository.findByTaskdescription(taskdescription);
 		// 2. Wenn Task gefunden, lösche den Datensatz in DB
-		if (toDeleteTaskOptional.isPresent()) {
-			Task toDeleteTask = toDeleteTaskOptional.get();
-			taskRepository.delete(toDeleteTask);
+		if (task != null) {
+			taskRepository.delete(task);
 			return "gelöscht";
 		}
 
