@@ -76,7 +76,7 @@ class App extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     console.log("Sending task description to Spring-Server: "+this.state.taskdescription);
-    fetch("http://localhost:8080/todo/tasks", {  // API endpoint (the complete URL!) to save a taskdescription
+    fetch("http://localhost:8080/todo/add", {  // API endpoint (the complete URL!) to save a taskdescription
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -159,7 +159,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>
+          <h1 className="headline">
             ToDo Liste
           </h1>
           <form onSubmit={this.handleSubmit}>
