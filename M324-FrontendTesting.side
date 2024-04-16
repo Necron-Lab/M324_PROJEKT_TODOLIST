@@ -1,0 +1,102 @@
+{
+  "id": "2ad785b2-0e07-49f6-9910-c2577657f6e2",
+  "version": "2.0",
+  "name": "M450-Testing",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "660c0155-9d54-49ef-bcd5-dd3b9c70d08e",
+    "name": "Adding",
+    "commands": [{
+      "id": "382e6efc-486e-4091-b57a-c3abbee894f2",
+      "comment": "",
+      "command": "open",
+      "target": "/selenium-testing",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acb6ef72-bc08-4d58-b871-49aeec3042f9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "936x556",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14859a91-0c86-4da4-aca8-70e8698f47f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35ae7fcf-d1ef-4df9-933c-dc082c0665dc",
+      "comment": "",
+      "command": "type",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='dihsaifihei']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Test1"
+    }, {
+      "id": "d525b624-09d1-4fff-85d5-8b8180383323",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Absenden')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "63f20bb5-de2a-4ba8-b094-00515f5133aa",
+    "name": "Done",
+    "commands": [{
+      "id": "02f94417-ac37-4402-964e-b7aee73be429",
+      "comment": "",
+      "command": "open",
+      "target": "/selenium-testing",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92c3c208-1d7a-4190-b33c-760a1a0323f6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "936x556",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6594bb7-06e5-40aa-ba6b-b3407b3fea05",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(1)",
+      "targets": [
+        ["css=button:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/header/div/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ebd528fb-437a-4e05-922a-9e9f816b4bc6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["660c0155-9d54-49ef-bcd5-dd3b9c70d08e"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
